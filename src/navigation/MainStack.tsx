@@ -1,11 +1,11 @@
 import React, {FC} from 'react';
 import {RouteModel} from 'models';
 import routes from './RoutePaths';
-import {Home} from 'screens';
 import {
   createNativeStackNavigator,
   NativeStackNavigationOptions,
 } from '@react-navigation/native-stack';
+import BottomTabs from './BottomTab';
 
 const Stack = createNativeStackNavigator<RouteModel>();
 
@@ -21,7 +21,7 @@ const MainStack: FC = () => {
       screenOptions={screenOptions}
       initialRouteName={routes.home}>
       <Stack.Group>
-        <Stack.Screen name={routes.home} component={Home} />
+        <Stack.Screen name={routes.home} component={BottomTabs} />
       </Stack.Group>
     </Stack.Navigator>
   );

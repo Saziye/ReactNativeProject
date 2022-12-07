@@ -1,19 +1,26 @@
 import {Container, Search} from 'components';
-import React, {useState} from 'react';
+import React, {useEffect, useState} from 'react';
 import {
   Keyboard,
   KeyboardAvoidingView,
   Platform,
+  ScrollView,
   StyleSheet,
   Text,
   TouchableWithoutFeedback,
   View,
 } from 'react-native';
+import { useDispatch } from 'react-redux';
+import { getPopulars } from 'stores/popular';
 import {Colors, Fonts, Scale} from 'theme';
-
 
 const Home = () => {
   const [searchValue, setSearchValue] = useState('');
+  const dispatch = useDispatch();
+
+  useEffect(()=> {
+    dispatch(getPopulars())
+  },[])
   return (
     <Container>
       <View style={styles.headerContainer}>
@@ -24,11 +31,17 @@ const Home = () => {
           behavior={Platform.OS === 'ios' ? 'padding' : undefined}
           keyboardVerticalOffset={Scale(100)}
           style={{flex: 1}}>
-          <Search
-            value={searchValue}
-            placeholder="Search"
-            onChangeText={value => setSearchValue(value)}
-          />
+          <ScrollView
+            style={styles.container}
+            showsVerticalScrollIndicator={false}
+            contentInset={{bottom: 10}}
+            contentContainerStyle={styles.scrollViewContent}>
+            <Search
+              value={searchValue}
+              placeholder="Search"
+              onChangeText={value => setSearchValue(value)}
+            />
+          </ScrollView>
         </KeyboardAvoidingView>
       </TouchableWithoutFeedback>
     </Container>
@@ -38,6 +51,9 @@ const Home = () => {
 export default Home;
 
 const styles = StyleSheet.create({
+  container: {
+    flex: 1,
+  },
   headerContainer: {
     paddingLeft: Scale(24),
     paddingRight: Scale(24),
@@ -49,7 +65,7 @@ const styles = StyleSheet.create({
     fontSize: Scale(18),
     lineHeight: Scale(27),
   },
-  searchContainer: {
-    // marginHorizontal:Scale(24),
+  scrollViewContent: {
+    flexGrow: 1,
   },
 });

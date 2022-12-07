@@ -22,6 +22,7 @@ export default abstract class HttpClient extends EventEmitter {
     });
     this.instance.interceptors.request.use(
       request => {
+        console.log({request});
         return request;
       },
       error => {
@@ -30,9 +31,11 @@ export default abstract class HttpClient extends EventEmitter {
     );
     this.instance.interceptors.response.use(
       response => {
+        console.log({response});
         return response;
       },
       error => {
+        console.log({error});
         if (typeof error.response !== 'undefined') {
           return {
             success: false,
@@ -52,8 +55,10 @@ export default abstract class HttpClient extends EventEmitter {
     url: string,
     data?: {[key: string]: any},
   ): Promise<T> {
-    let queryParams = new URLSearchParams(data).toString();
-    let reqInstance = await this.instance.get(`${url}?${queryParams}`);
+    data && Object.keys(data).forEach((key) => {
+      url = url.replace('@'+key,data[key])
+    })
+    let reqInstance = await this.instance.get(`${url}`);
 
     return reqInstance;
   }

@@ -1,4 +1,5 @@
 module.exports = {
     ENV: 'prod',
-    BASE_URL: ''
+    BASE_URL: '',
+    API_KEY:'',
 };

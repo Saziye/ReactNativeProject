@@ -5,6 +5,7 @@ import IconSearch from './search.svg';
 import IconSearchDeactive from './search-deactive.svg';
 import IconWatchlist from './watchlist.svg';
 import IconWatchlistDeactive from './watchlist-deactive.svg';
+import IconSearchInput from './search-input.svg';
 
 const Icons = {
   Popcorn: IconPopcorn,
@@ -14,6 +15,7 @@ const Icons = {
   SearchDeactive: IconSearchDeactive,
   Watchlist: IconWatchlist,
   WatchlistDeactive: IconWatchlistDeactive,
+  SearchInput: IconSearchInput,
 };
 
 export default Icons;

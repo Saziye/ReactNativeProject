@@ -11,9 +11,15 @@
 		13B07FBC1A68108700A75B9A /* AppDelegate.mm in Sources */ = {isa = PBXBuildFile; fileRef = 13B07FB01A68108700A75B9A /* AppDelegate.mm */; };
 		13B07FBF1A68108700A75B9A /* Images.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 13B07FB51A68108700A75B9A /* Images.xcassets */; };
 		13B07FC11A68108700A75B9A /* main.m in Sources */ = {isa = PBXBuildFile; fileRef = 13B07FB71A68108700A75B9A /* main.m */; };
+		31B0E35EEF23431EB0C6849B /* Poppins-Medium.ttf in Resources */ = {isa = PBXBuildFile; fileRef = CA2B43732D0749F1BEC1E5B2 /* Poppins-Medium.ttf */; };
 		31B40DF869E682B429CA6C50 /* libPods-ReactNativeProject-ReactNativeProjectTests.a in Frameworks */ = {isa = PBXBuildFile; fileRef = 3DA3C009C772C8C05839C48D /* libPods-ReactNativeProject-ReactNativeProjectTests.a */; };
+		64BC9C54237F4BC68C8B634B /* Poppins-Bold.ttf in Resources */ = {isa = PBXBuildFile; fileRef = 5C42596731BB48E9B25BE217 /* Poppins-Bold.ttf */; };
+		660820F4B2F74E4C8BEEA55D /* Poppins-Light.ttf in Resources */ = {isa = PBXBuildFile; fileRef = 609760CFB1D14F4AAEE9254C /* Poppins-Light.ttf */; };
+		7A3A662D87BB4718B791CA54 /* Poppins-SemiBold.ttf in Resources */ = {isa = PBXBuildFile; fileRef = 3A6F5CD1953345059A453FA8 /* Poppins-SemiBold.ttf */; };
 		81AB9BB82411601600AC10FF /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 81AB9BB72411601600AC10FF /* LaunchScreen.storyboard */; };
 		8C161B412B1A2F79777A2E76 /* libPods-ReactNativeProject.a in Frameworks */ = {isa = PBXBuildFile; fileRef = AF0A7DEC88F5E825E51771F5 /* libPods-ReactNativeProject.a */; };
+		9E02447FCD5840968BD88FB1 /* Poppins-Regular.ttf in Resources */ = {isa = PBXBuildFile; fileRef = AA52F958797A4963B28A5BAD /* Poppins-Regular.ttf */; };
+		A4159C2BC2364221B785391A /* Poppins-Thin.ttf in Resources */ = {isa = PBXBuildFile; fileRef = AAD91539071648F395044CD8 /* Poppins-Thin.ttf */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -36,12 +42,18 @@
 		13B07FB51A68108700A75B9A /* Images.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; name = Images.xcassets; path = ReactNativeProject/Images.xcassets; sourceTree = "<group>"; };
 		13B07FB61A68108700A75B9A /* Info.plist */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.plist.xml; name = Info.plist; path = ReactNativeProject/Info.plist; sourceTree = "<group>"; };
 		13B07FB71A68108700A75B9A /* main.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = main.m; path = ReactNativeProject/main.m; sourceTree = "<group>"; };
+		3A6F5CD1953345059A453FA8 /* Poppins-SemiBold.ttf */ = {isa = PBXFileReference; explicitFileType = undefined; fileEncoding = undefined; includeInIndex = 0; lastKnownFileType = unknown; name = "Poppins-SemiBold.ttf"; path = "../src/assets/fonts/Poppins-SemiBold.ttf"; sourceTree = "<group>"; };
 		3DA3C009C772C8C05839C48D /* libPods-ReactNativeProject-ReactNativeProjectTests.a */ = {isa = PBXFileReference; explicitFileType = archive.ar; includeInIndex = 0; path = "libPods-ReactNativeProject-ReactNativeProjectTests.a"; sourceTree = BUILT_PRODUCTS_DIR; };
 		433DE654F80A84E9B83239B2 /* Pods-ReactNativeProject.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-ReactNativeProject.release.xcconfig"; path = "Target Support Files/Pods-ReactNativeProject/Pods-ReactNativeProject.release.xcconfig"; sourceTree = "<group>"; };
+		5C42596731BB48E9B25BE217 /* Poppins-Bold.ttf */ = {isa = PBXFileReference; explicitFileType = undefined; fileEncoding = undefined; includeInIndex = 0; lastKnownFileType = unknown; name = "Poppins-Bold.ttf"; path = "../src/assets/fonts/Poppins-Bold.ttf"; sourceTree = "<group>"; };
+		609760CFB1D14F4AAEE9254C /* Poppins-Light.ttf */ = {isa = PBXFileReference; explicitFileType = undefined; fileEncoding = undefined; includeInIndex = 0; lastKnownFileType = unknown; name = "Poppins-Light.ttf"; path = "../src/assets/fonts/Poppins-Light.ttf"; sourceTree = "<group>"; };
 		81AB9BB72411601600AC10FF /* LaunchScreen.storyboard */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.storyboard; name = LaunchScreen.storyboard; path = ReactNativeProject/LaunchScreen.storyboard; sourceTree = "<group>"; };
 		88ACBFF90862CF97F6492620 /* Pods-ReactNativeProject.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-ReactNativeProject.debug.xcconfig"; path = "Target Support Files/Pods-ReactNativeProject/Pods-ReactNativeProject.debug.xcconfig"; sourceTree = "<group>"; };
+		AA52F958797A4963B28A5BAD /* Poppins-Regular.ttf */ = {isa = PBXFileReference; explicitFileType = undefined; fileEncoding = undefined; includeInIndex = 0; lastKnownFileType = unknown; name = "Poppins-Regular.ttf"; path = "../src/assets/fonts/Poppins-Regular.ttf"; sourceTree = "<group>"; };
+		AAD91539071648F395044CD8 /* Poppins-Thin.ttf */ = {isa = PBXFileReference; explicitFileType = undefined; fileEncoding = undefined; includeInIndex = 0; lastKnownFileType = unknown; name = "Poppins-Thin.ttf"; path = "../src/assets/fonts/Poppins-Thin.ttf"; sourceTree = "<group>"; };
 		AF0A7DEC88F5E825E51771F5 /* libPods-ReactNativeProject.a */ = {isa = PBXFileReference; explicitFileType = archive.ar; includeInIndex = 0; path = "libPods-ReactNativeProject.a"; sourceTree = BUILT_PRODUCTS_DIR; };
 		BF2F072A4616829BA23F8EC0 /* Pods-ReactNativeProject-ReactNativeProjectTests.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-ReactNativeProject-ReactNativeProjectTests.release.xcconfig"; path = "Target Support Files/Pods-ReactNativeProject-ReactNativeProjectTests/Pods-ReactNativeProject-ReactNativeProjectTests.release.xcconfig"; sourceTree = "<group>"; };
+		CA2B43732D0749F1BEC1E5B2 /* Poppins-Medium.ttf */ = {isa = PBXFileReference; explicitFileType = undefined; fileEncoding = undefined; includeInIndex = 0; lastKnownFileType = unknown; name = "Poppins-Medium.ttf"; path = "../src/assets/fonts/Poppins-Medium.ttf"; sourceTree = "<group>"; };
 		EAC65FB8BD8B0B59286BEE48 /* Pods-ReactNativeProject-ReactNativeProjectTests.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-ReactNativeProject-ReactNativeProjectTests.debug.xcconfig"; path = "Target Support Files/Pods-ReactNativeProject-ReactNativeProjectTests/Pods-ReactNativeProject-ReactNativeProjectTests.debug.xcconfig"; sourceTree = "<group>"; };
 		ED297162215061F000B7C4FE /* JavaScriptCore.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = JavaScriptCore.framework; path = System/Library/Frameworks/JavaScriptCore.framework; sourceTree = SDKROOT; };
 /* End PBXFileReference section */
@@ -96,6 +108,20 @@
 			name = ReactNativeProject;
 			sourceTree = "<group>";
 		};
+		2BB4490892E240769CEE1BC6 /* Resources */ = {
+			isa = PBXGroup;
+			children = (
+				5C42596731BB48E9B25BE217 /* Poppins-Bold.ttf */,
+				609760CFB1D14F4AAEE9254C /* Poppins-Light.ttf */,
+				CA2B43732D0749F1BEC1E5B2 /* Poppins-Medium.ttf */,
+				AA52F958797A4963B28A5BAD /* Poppins-Regular.ttf */,
+				3A6F5CD1953345059A453FA8 /* Poppins-SemiBold.ttf */,
+				AAD91539071648F395044CD8 /* Poppins-Thin.ttf */,
+			);
+			name = Resources;
+			path = "";
+			sourceTree = "<group>";
+		};
 		2D16E6871FA4F8E400B85C8A /* Frameworks */ = {
 			isa = PBXGroup;
 			children = (
@@ -122,6 +148,7 @@
 				83CBBA001A601CBA00E9B192 /* Products */,
 				2D16E6871FA4F8E400B85C8A /* Frameworks */,
 				BBD78D7AC51CEA395F1C20DB /* Pods */,
+				2BB4490892E240769CEE1BC6 /* Resources */,
 			);
 			indentWidth = 2;
 			sourceTree = "<group>";
@@ -244,6 +271,12 @@
 			files = (
 				81AB9BB82411601600AC10FF /* LaunchScreen.storyboard in Resources */,
 				13B07FBF1A68108700A75B9A /* Images.xcassets in Resources */,
+				64BC9C54237F4BC68C8B634B /* Poppins-Bold.ttf in Resources */,
+				660820F4B2F74E4C8BEEA55D /* Poppins-Light.ttf in Resources */,
+				31B0E35EEF23431EB0C6849B /* Poppins-Medium.ttf in Resources */,
+				9E02447FCD5840968BD88FB1 /* Poppins-Regular.ttf in Resources */,
+				7A3A662D87BB4718B791CA54 /* Poppins-SemiBold.ttf in Resources */,
+				A4159C2BC2364221B785391A /* Poppins-Thin.ttf in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};

@@ -1,14 +1,18 @@
 import React from 'react';
-import {View, Text} from 'react-native';
 import {Provider} from 'react-redux';
 import {store} from 'stores';
+import {
+  initialWindowMetrics,
+  SafeAreaProvider,
+} from 'react-native-safe-area-context';
+import Router from 'navigation';
 
 export default function App() {
   return (
     <Provider store={store}>
-      <View>
-        <Text>index</Text>
-      </View>
+      <SafeAreaProvider initialMetrics={initialWindowMetrics}>
+        <Router />
+      </SafeAreaProvider>
     </Provider>
   );
 }

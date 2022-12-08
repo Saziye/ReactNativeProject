@@ -12,7 +12,6 @@ function* onGetPopulars(
     const onPopularSagaResponse: PopularModule.Response = yield call(
       [api, api.GetPopulars]
     );
-
     if (onPopularSagaResponse.status === StatusCodes.OK) {
       yield put(getPopularsSuccess(onPopularSagaResponse));
     } else {

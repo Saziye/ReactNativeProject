@@ -21,11 +21,12 @@ export const popularSlice = createSlice({
       state: PopularModule.PopularStore,
       {payload}: PayloadAction<PopularModule.Response>,
     ) => {
+      console.log({payload})
       state.loading = false;
-      state.populars = payload.data?.resultData?.result;
-      state.page = payload.data.resultData.page;
-      state.total_results = payload.data.resultData.total_results;
-      state.total_pages = payload.data.resultData.total_pages;
+      state.populars = payload.data?.results;
+      state.page = payload.data?.page;
+      state.total_results = payload.data?.total_results;
+      state.total_pages = payload.data?.total_pages;
     },
     getPopularsFail: (
       state: PopularModule.PopularStore,

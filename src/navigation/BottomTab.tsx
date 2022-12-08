@@ -1,6 +1,6 @@
 import React, {FC} from 'react';
 import {createBottomTabNavigator} from '@react-navigation/bottom-tabs';
-import {Search, Home, WatchList} from 'screens';
+import {Search, Home, SignUp} from 'screens';
 import {RouteModel} from 'models';
 import routes from './RoutePaths';
 import {CustomBottomTab} from 'components';
@@ -14,10 +14,7 @@ const BottomTabs: FC = () => {
       tabBar={props => <CustomBottomTab {...props} />}>
       <BottomTabsNavigator.Screen name={routes.home} component={Home} />
       <BottomTabsNavigator.Screen name={routes.search} component={Search} />
-      <BottomTabsNavigator.Screen
-        name={routes.watchlist}
-        component={WatchList}
-      />
+      <BottomTabsNavigator.Screen name={routes.signup} component={SignUp} />
     </BottomTabsNavigator.Navigator>
   );
 };

@@ -5,3 +5,5 @@ export * from './SafeAreaView';
 export * from './Container';
 export * from './Search';
 export * from './SelectionTab';
+export * from './Button';
+export * from './Card';

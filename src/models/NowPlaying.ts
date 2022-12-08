@@ -1,8 +1,8 @@
 import {ServiceModule} from './Service';
 
-export declare module PopularModule {
-  interface PopularStore {
-    populars: Movie[];
+export declare module NowPlayingModule {
+  interface NowPlayingStore {
+    nowPlayings: Movie[];
     page?: number;
     total_results?: number;
     total_pages?: number;
@@ -10,15 +10,15 @@ export declare module PopularModule {
   }
   interface Request {}
   interface Response extends ServiceModule.Response {
-    data: Popular;
+    data: NowPlaying;
   }
-  interface Populars {
-    resultData: Popular;
+  interface NowPlayings {
+    resultData: NowPlaying;
     resultCode: number;
     resultMessage: string;
   }
 
-  interface Popular {
+  interface NowPlaying {
     page: number;
     results: Movie[];
     total_results: number;

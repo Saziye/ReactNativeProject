@@ -1,4 +1,11 @@
+import { UpcomingModule } from 'models';
 export type {ToastModule} from './Toast';
 export type {default as RouteModel} from './RouteModel';
 export type {ServiceModule} from './Service';
+export type {MovieDetailModule} from './MovieDetail';
+export type {MovieCreditModule} from './MovieCredit';
+export type {MovieReviewsModule} from './MovieReviews';
 export type {PopularModule} from './Popular';
+export type {NowPlayingModule} from './NowPlaying';
+export type {TopRatedModule} from './TopRated';
+export type {UpcomingModule} from './Upcoming';

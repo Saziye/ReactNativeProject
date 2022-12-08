@@ -6,6 +6,7 @@ import {
   NativeStackNavigationOptions,
 } from '@react-navigation/native-stack';
 import BottomTabs from './BottomTab';
+import { MovieDetail } from 'screens';
 
 const Stack = createNativeStackNavigator<RouteModel>();
 
@@ -22,6 +23,7 @@ const MainStack: FC = () => {
       initialRouteName={routes.home}>
       <Stack.Group>
         <Stack.Screen name={routes.home} component={BottomTabs} />
+        <Stack.Screen name={routes.movieDetail} component={MovieDetail} />
       </Stack.Group>
     </Stack.Navigator>
   );

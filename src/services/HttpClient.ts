@@ -59,7 +59,7 @@ export default abstract class HttpClient extends EventEmitter {
       url = url.replace('@'+key,data[key])
     })
     let reqInstance = await this.instance.get(`${url}`);
-
+    console.log({reqInstance})
     return reqInstance;
   }
 

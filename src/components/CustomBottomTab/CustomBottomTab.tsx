@@ -37,10 +37,10 @@ const CustomBottomTab: FC<ICustomBottomTab> = ({navigation, state}) => {
         ),
     },
     {
-      title: 'Watch List',
-      redirect: routes.watchlist,
+      title: 'Sign Up',
+      redirect: routes.signup,
       icon:
-        activeButton === routes.watchlist ? (
+        activeButton === routes.signup ? (
           <Icons.Watchlist width={Scale(26)} height={Scale(26)} />
         ) : (
           <Icons.WatchlistDeactive width={Scale(26)} height={Scale(26)} />

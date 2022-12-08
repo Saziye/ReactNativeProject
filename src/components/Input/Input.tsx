@@ -154,89 +154,91 @@ const Input = ({
   };
 
   return (
-    <View style={[styles.inputContainer, containerStyle]}>
-      <TouchableOpacity
-        style={[
-          styles.input,
-          inputStyle,
-          errorMessage ? styles.inputError : _isFocused && styles.inputFocus,
-          {
-            height: textArea ? Scale(100) : Scale(52),
-            alignItems: textArea ? 'flex-start' : 'center',
-            paddingTop: textArea ? Scale(10) : undefined,
-          },
-        ]}
-        activeOpacity={1}
-        onPress={() => _inputRef?.current?.focus()}>
-        <Animated.Text
-          style={[styles.placeholder, getAnimatedPlaceholderStyles()]}>
-          {placeholder}
-        </Animated.Text>
-        {mask ? (
-          <AnimatedMaskInput
-            ref={_inputRef}
-            style={[
-              styles.textInput,
-              getAnimatedStaticPlaceholderStyles(),
-              {paddingTop: Scale(16)},
-            ]}
-            value={value}
-            onChangeText={e => _onChangeText(e)}
-            onFocus={e => _handleFocus(e)}
-            onBlur={e => {
-              _handleBlur(e);
-            }}
-            returnKeyType="done"
-            placeholder={staticPlaceholder}
-            mask={mask}
-            {...props}
-          />
-        ) : (
-          <AnimatedTextInput
-            ref={_inputRef}
-            style={[
-              styles.textInput,
-              getAnimatedStaticPlaceholderStyles(),
-              {
-                marginTop: textArea ? Scale(15) : undefined,
-                paddingTop: textArea ? Scale(0) : Scale(16),
-              },
-            ]}
-            value={value.replace('/[^p{L}p{N}p{P}p{Z}^$\n]/gu', '')}
-            onChangeText={e => _onChangeText(e)}
-            onFocus={e => _handleFocus(e)}
-            onBlur={e => {
-              _handleBlur(e);
-            }}
-            multiline={textArea}
-            returnKeyType="done"
-            placeholder={staticPlaceholder}
-            {...props}
-          />
-        )}
-        {suffix && (value !== '' || _isFocused) ? (
+    <View style={[styles.container, containerStyle]}>
+      <View style={styles.inputContainer}>
+        <TouchableOpacity
+          style={[
+            styles.input,
+            inputStyle,
+            errorMessage ? styles.inputError : _isFocused && styles.inputFocus,
+            {
+              height: textArea ? Scale(100) : Scale(52),
+              alignItems: textArea ? 'flex-start' : 'center',
+              paddingTop: textArea ? Scale(10) : undefined,
+            },
+          ]}
+          activeOpacity={1}
+          onPress={() => _inputRef?.current?.focus()}>
           <Animated.Text
-            style={[
-              styles.textInput,
-              getAnimatedStaticPlaceholderStyles(),
-              {
-                marginTop: textArea ? Scale(15) : undefined,
-                paddingTop: textArea ? Scale(0) : Scale(16),
-              },
-            ]}>
-            {suffix}
+            style={[styles.placeholder, getAnimatedPlaceholderStyles()]}>
+            {placeholder}
           </Animated.Text>
-        ) : null}
-        {suffix ? <View style={styles.flex} /> : null}
-        {RightIcon && (
-          <RightIcon
-            width={Scale(24)}
-            height={Scale(24)}
-            fill={RightIconColor}
-            onPress={onPressRightIcon}
-          />
-        )}
-      </TouchableOpacity>
+          {mask ? (
+            <AnimatedMaskInput
+              ref={_inputRef}
+              style={[
+                styles.textInput,
+                getAnimatedStaticPlaceholderStyles(),
+                {paddingTop: Scale(16)},
+              ]}
+              value={value}
+              onChangeText={e => _onChangeText(e)}
+              onFocus={e => _handleFocus(e)}
+              onBlur={e => {
+                _handleBlur(e);
+              }}
+              returnKeyType="done"
+              placeholder={staticPlaceholder}
+              mask={mask}
+              {...props}
+            />
+          ) : (
+            <AnimatedTextInput
+              ref={_inputRef}
+              style={[
+                styles.textInput,
+                getAnimatedStaticPlaceholderStyles(),
+                {
+                  marginTop: textArea ? Scale(15) : undefined,
+                  paddingTop: textArea ? Scale(0) : Scale(16),
+                },
+              ]}
+              value={value.replace('/[^p{L}p{N}p{P}p{Z}^$\n]/gu', '')}
+              onChangeText={e => _onChangeText(e)}
+              onFocus={e => _handleFocus(e)}
+              onBlur={e => {
+                _handleBlur(e);
+              }}
+              multiline={textArea}
+              returnKeyType="done"
+              placeholder={staticPlaceholder}
+              {...props}
+            />
+          )}
+          {suffix && (value !== '' || _isFocused) ? (
+            <Animated.Text
+              style={[
+                styles.textInput,
+                getAnimatedStaticPlaceholderStyles(),
+                {
+                  marginTop: textArea ? Scale(15) : undefined,
+                  paddingTop: textArea ? Scale(0) : Scale(16),
+                },
+              ]}>
+              {suffix}
+            </Animated.Text>
+          ) : null}
+          {suffix ? <View style={styles.flex} /> : null}
+          {RightIcon && (
+            <RightIcon
+              width={Scale(24)}
+              height={Scale(24)}
+              fill={RightIconColor}
+              onPress={onPressRightIcon}
+            />
+          )}
+        </TouchableOpacity>
+      </View>
       {errorMessage && !hideErrorMessage ? (
         <ErrorMessage
           style={styles.error}
@@ -249,9 +251,11 @@ const Input = ({
 };
 
 const styles = StyleSheet.create({
+  container: {
+    marginHorizontal: Scale(24),
+  },
   inputContainer: {
     backgroundColor: Colors.secondary2,
-    marginHorizontal: Scale(24),
     borderRadius: Scale(16),
   },
   input: {
@@ -286,7 +290,7 @@ const styles = StyleSheet.create({
   flex: {flex: 1},
   error: {
     marginLeft: Scale(2),
-    marginTop: Scale(6),
+    marginTop: Scale(4),
   },
   errorText: {
     fontSize: Scale(14),

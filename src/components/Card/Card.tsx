@@ -2,6 +2,7 @@ import React from 'react';
 import {StyleSheet, TouchableOpacity, ViewStyle} from 'react-native';
 import {Scale, Fonts, Colors} from 'theme';
 import FastImage, {ResizeMode} from 'react-native-fast-image';
+import {number} from 'yup';
 
 interface TCard {
   height?: number;
@@ -11,6 +12,9 @@ interface TCard {
   onPress?: () => void;
   containerStyle?: ViewStyle;
   resizeMode?: ResizeMode;
+  borderRadius?: number;
+  borderBottomLeftRadius?: number;
+  borderBottomRightRadius?: number;
 }
 
 const Card = ({
@@ -21,18 +25,31 @@ const Card = ({
   onPress = () => {},
   containerStyle,
   resizeMode,
+  borderRadius = 14,
+  borderBottomLeftRadius,
+  borderBottomRightRadius,
 }: TCard) => {
   return (
     <TouchableOpacity
       style={[
-        {backgroundColor: background, height, width},
+        {
+          backgroundColor: background,
+          height,
+          width,
+          borderRadius,
+          borderBottomLeftRadius,
+          borderBottomRightRadius,
+        },
         style.container,
         containerStyle,
       ]}
       activeOpacity={0.5}
       onPress={onPress}>
       <FastImage
-        style={style.bgImage}
+        style={[
+          {borderRadius, borderBottomLeftRadius, borderBottomRightRadius},
+          style.bgImage,
+        ]}
         source={{
           uri: image || '',
         }}
@@ -45,12 +62,10 @@ const Card = ({
 const style = StyleSheet.create({
   container: {
     marginBottom: Scale(8),
-    borderRadius: 14,
   },
   bgImage: {
     width: '100%',
     height: '100%',
-    borderRadius: 14,
   },
   labelText: {
     fontFamily: Fonts.Bold,

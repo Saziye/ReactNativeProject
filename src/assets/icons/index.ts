@@ -6,6 +6,10 @@ import IconSearchDeactive from './search-deactive.svg';
 import IconWatchlist from './watchlist.svg';
 import IconWatchlistDeactive from './watchlist-deactive.svg';
 import IconSearchInput from './search-input.svg';
+import IconTime from './time.svg';
+import IconCalendar from './calendar.svg';
+import IconTicket from './ticket.svg';
+import IconAvatar from './avatar.svg';
 
 const Icons = {
   Popcorn: IconPopcorn,
@@ -16,6 +20,10 @@ const Icons = {
   Watchlist: IconWatchlist,
   WatchlistDeactive: IconWatchlistDeactive,
   SearchInput: IconSearchInput,
+  Time: IconTime,
+  Calendar: IconCalendar,
+  Ticket: IconTicket,
+  Avatar: IconAvatar,
 };
 
 export default Icons;

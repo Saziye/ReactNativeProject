@@ -71,7 +71,7 @@ const Home = () => {
 
   const _renderPopularItem = ({item, index}: any) => {
     const onPressCard = (item: PopularModule.Movie) => {
-      navigate(routes.movieDetail, item);
+      navigate(routes.movieDetail, item.id);
     };
     return (
       <View style={styles.cardITemContainer}>
